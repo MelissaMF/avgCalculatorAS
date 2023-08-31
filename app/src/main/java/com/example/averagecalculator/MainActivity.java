@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 isValid =false;
             }
             if(isValid){
-                preExamGrade = firstGrade * 0.25 + secondGrade * 0.35 + thirdGrade *0.4;
+                preExamGrade = Math.round((firstGrade * 0.25 + secondGrade * 0.35 + thirdGrade *0.4) * 10.0)/10.0;
                 tvpreExamGrade.setText("Nota Presentación: " + preExamGrade.toString());
             }
             if (attendance < 0 || attendance > 100) {
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             examGrade = Double.parseDouble(etexamGrade.getText().toString());
             if (examGrade >= 1 && examGrade <= 7) {
-                finalAverage = examGrade * 0.4 + preExamGrade * 0.6;
+                finalAverage = Math.round((examGrade * 0.4 + preExamGrade * 0.6)*10.0)/10.0;
                 setFinalResults(finalAverage);
             } else{
                 etexamGrade.setError("Nota de examen no válida");

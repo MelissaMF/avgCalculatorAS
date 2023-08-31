@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculadora de Notas IPVG"
+        android:padding="16dp"
+        android:textSize="22sp"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/etFirstGrade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Primera Calificacion"
+        android:inputType="number|numberDecimal" />
+
+    <EditText
+        android:id="@+id/etSecondGrade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Segunda Calificacion"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etThirdGrade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Tercera Calificacion"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etAttendance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Asistencia"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btmCalculateAverage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="calculateAverage"
+        android:padding="16dp"
+        android:text="Calcular Nota Presentación" />
+
+    <TextView
+        android:id="@+id/tvPreExamGrade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nota Presentación:"
+        android:textSize="16sp"/>
+
+    <EditText
+        android:id="@+id/etExamGrade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nota Examen"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btmFinalAverage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="calculateFinalAverage"
+        android:text="Calcular Nota Final"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tvFinalAverage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nota Final:"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tvFinalSituation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Situación Final:"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/btmClean"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="clean"
+        android:text="Limpiar"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <ImageView
+        android:id="@+id/imgState"
+        android:layout_width="match_parent"
+        android:layout_height="163dp"
+        app:srcCompat="@drawable/aprobado"
+        tools:visibility="invisible" />
+
+</LinearLayout>
